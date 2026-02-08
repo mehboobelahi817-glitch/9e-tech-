@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 9 – Tech Govt Central Model School</title>
+
+<style>
+:root{
+  --bg:#ffffff;
+  --text:#000;
+  --card:#f2f2f2;
+}
+body.dark{
+  --bg:#0f0f0f;
+  --text:#f5f5f5;
+  --card:#1e1e1e;
+}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.4s;
+}
+header{
+  background:linear-gradient(90deg,#000,#0a7d3c);
+  color:#fff;
+  padding:15px;
+  text-align:center;
+}
+.toggle{
+  position:fixed;
+  top:15px;
+  right:15px;
+  padding:8px 12px;
+  background:#000;
+  color:#fff;
+  border-radius:20px;
+  cursor:pointer;
+  z-index:1000;
+}
+.section{
+  padding:25px;
+  animation:fade 0.8s ease;
+}
+.panel{
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:30px;
+}
+h2{margin-top:0}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:12px;
+}
+.card{
+  background:#fff;
+  color:#000;
+  padding:12px;
+  border-radius:10px;
+  font-size:14px;
+}
+body.dark .card{background:#2a2a2a;color:#fff}
+input,select{
+  width:100%;
+  padding:8px;
+  margin:6px 0;
+}
+button{
+  background:#0a7d3c;
+  color:#fff;
+  border:none;
+  border-radius:6px;
+  padding:8px;
+  cursor:pointer;
+}
+@keyframes fade{
+  from{opacity:0;transform:translateY(15px)}
+  to{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<div class="toggle" onclick="toggleMode()">🌙</div>
+
+<header>
+<h1>Class 9 – Tech Government Central Model School</h1>
+<p>Academic Session 2026</p>
+</header>
+
+<div class="section">
+
+<!-- LOGIN PANEL -->
+<div class="panel">
+<h2>🔐 Student Login</h2>
+<input placeholder="Name (optional)">
+<input placeholder="Roll No (optional)">
+<select>
+<option>Gender (optional)</option>
+<option>Male</option>
+<option>Female</option>
+</select>
+<button onclick="alert('Welcome to Class 9 Portal')">Register / Continue</button>
+</div>
+
+<!-- TEACHERS PANEL -->
+<div class="panel" style="background:linear-gradient(#fffacd,#fff);">
+<h2>👨‍🏫 Teachers Panel</h2>
+<div class="grid">
+<div class="card"><b>Sir Abubakar</b><br>Class Incharge<br>Physics, Math</div>
+<div class="card"><b>Sir Haqnawaz</b><br>Chemistry</div>
+<div class="card"><b>Sir Faisal</b><br>English</div>
+<div class="card"><b>Sir Mumtaz</b><br>Urdu, Tarjuma-tul-Quran, Islamiyat</div>
+<div class="card"><b>Sir Kashif</b><br>Computer, ICT</div>
+</div>
+</div>
+
+<!-- STUDENT PANEL -->
+<div class="panel" style="background:linear-gradient(#ff9800,#000);color:#fff">
+<h2>👥 Student Panel (56 Students)</h2>
+
+<input id="search" placeholder="Search student by name..." onkeyup="searchStudent()">
+
+<div class="grid" id="studentList">
+<div class="card">01 Ayan</div><div class="card">02 Tamoor</div><div class="card">03 Shazaib</div>
+<div class="card">04 Zubair</div><div class="card">05 Rana</div><div class="card">06 Haseeb</div>
+<div class="card">07 Ali</div><div class="card">08 Rehan</div><div class="card">09 Daniyal</div>
+<div class="card">10 Subhan</div><div class="card">11 Ahsan</div><div class="card">12 Momin</div>
+<div class="card">13 Saqib</div><div class="card">14 Hamza</div><div class="card">15 Abdullah</div>
+<div class="card">16 Ahmed</div><div class="card">17 Hassan</div><div class="card">18 Huzaifa</div>
+<div class="card">19 Umar</div><div class="card">20 Saad</div><div class="card">21 Talha</div>
+<div class="card">22 Faizan</div><div class="card">23 Areeb</div><div class="card">24 Danish</div>
+<div class="card">25 Usman</div><div class="card">26 Bilal</div><div class="card">27 Moiz</div>
+<div class="card">28 Arsalan</div><div class="card">29 Asad</div><div class="card">30 Sameer</div>
+<div class="card">31 Rayyan</div><div class="card">32 Maaz</div><div class="card">33 Fahad</div>
+<div class="card">34 Haris</div><div class="card">35 Salman</div><div class="card">36 Imran</div>
+<div class="card">37 Noman</div><div class="card">38 Waqas</div><div class="card">39 Zeeshan</div>
+<div class="card">40 Farhan</div><div class="card">41 Rizwan</div><div class="card">42 Junaid</div>
+<div class="card">43 Sohail</div><div class="card">44 Kamran</div><div class="card">45 Kashif</div>
+<div class="card">46 Shahid</div><div class="card">47 Naveed</div><div class="card">48 Mubashir</div>
+<div class="card">49 Irfan</div><div class="card">50 Tahir</div><div class="card">51 Yasir</div>
+<div class="card">52 Azhar</div><div class="card">53 Taha</div><div class="card">54 Arham</div>
+<div class="card">55 Rayan</div><div class="card">56 Shahmeer</div>
+</div>
+</div>
+
+<script>
+function toggleMode(){
+ document.body.classList.toggle('dark');
+ localStorage.setItem('mode',document.body.classList.contains('dark'));
+}
+if(localStorage.getItem('mode')==="true"){
+ document.body.classList.add('dark');
+}
+function searchStudent(){
+ let input=document.getElementById("search").value.toLowerCase();
+ let cards=document.querySelectorAll("#studentList .card");
+ cards.forEach(c=>{
+   c.style.display=c.innerText.toLowerCase().includes(input)?"block":"none";
+ });
+}
+</script>
+<!-- TOPPER BOARD PANEL -->
+<div class="panel">
+<h2>🏆 Topper Board (Annual Result)</h2>
+
+<div class="grid">
+  <div class="card">
+    🥇 <b>Ayaan</b><br>
+    Roll No: 01<br>
+    Marks: <b>512 / 535</b>
+  </div>
+
+  <div class="card">
+    🥈 <b>Tamoor</b><br>
+    Roll No: 02<br>
+    Marks: <b>456 / 535</b>
+  </div>
+
+  <div class="card">
+    🥉 <b>Shazaib</b><br>
+    Roll No: 03<br>
+    Marks: <b>432 / 535</b>
+  </div>
+</div>
+</div>
+
+<!-- HOMEWORK PANEL -->
+<div class="panel">
+<h2>📘 Homework Panel</h2>
+
+<ul style="line-height:1.8">
+  <li><b>Physics:</b> Chapter 3 – Numerical problems (Q1–Q10)</li>
+  <li><b>Chemistry:</b> Chapter 2 – Short questions + definitions</li>
+  <li><b>Mathematics:</b> Exercise 4.2 (All questions)</li>
+  <li><b>Computer:</b> Chapter 1 – Read and prepare MCQs</li>
+  <li><b>ICT:</b> Chapter 2 – Short notes</li>
+  <li><b>English:</b> Letter to a friend + learn Chapter 1</li>
+  <li><b>Urdu:</b> Mazmoon + tashreeh</li>
+  <li><b>Islamiyat:</b> Learn first 5 chapters</li>
+  <li><b>Tarjuma-tul-Quran:</b> Surah translation (assigned portion)</li>
+</ul>
+</div>
+
+<!-- TEST SESSION PANEL -->
+<div class="panel">
+<h2>🗓️ 20-Day Test Session Plan (Class 9 – 2026)</h2>
+
+<table style="width:100%;border-collapse:collapse">
+<tr>
+  <th style="border-bottom:1px solid #999;padding:8px;text-align:left">Days</th>
+  <th style="border-bottom:1px solid #999;padding:8px;text-align:left">Subject & Syllabus</th>
+</tr>
+
+<tr><td style="padding:8px">Day 1–2</td><td style="padding:8px">Physics – 8 Chapters</td></tr>
+<tr><td style="padding:8px">Day 3–5</td><td style="padding:8px">Chemistry – 12 Chapters</td></tr>
+<tr><td style="padding:8px">Day 6</td><td style="padding:8px">ICT – 6 Chapters</td></tr>
+<tr><td style="padding:8px">Day 7–8</td><td style="padding:8px">Computer – 10 Chapters</td></tr>
+<tr><td style="padding:8px">Day 9–11</td><td style="padding:8px">Mathematics – 12 Chapters</td></tr>
+<tr><td style="padding:8px">Day 12–14</td><td style="padding:8px">Islamiyat – 40 Chapters</td></tr>
+<tr><td style="padding:8px">Day 15–16</td><td style="padding:8px">Tarjuma-tul-Quran – 18 Chapters</td></tr>
+<tr>
+  <td style="padding:8px">Day 17–18</td>
+  <td style="padding:8px">
+    Urdu – 15 Chapters<br>
+    Zarbul-Misaal: 6 pages<br>
+    Correct sentences: 2 pages<br>
+    Stories: 11 + Letters: 8
+  </td>
+</tr>
+<tr>
+  <td style="padding:8px">Day 19–20</td>
+  <td style="padding:8px">
+    English – 8 Chapters<br>
+    Letters: 15<br>
+    Comprehension: 15
+  </td>
+</tr>
+</table>
+
+<p style="margin-top:15px">
+<b>Note:</b> Tests will be conducted subject-wise with MCQs, short questions, and long questions.
+</p>
+</div>
+<!-- BOARD PREPARATION HUB -->
+<div class="panel" style="background:linear-gradient(#b00000,#000);color:#fff">
+<h2>📚 Board Preparation Hub</h2>
+<div class="grid">
+<a class="card" href="#">Physics PDF - Sir Abubakar</a>
+<a class="card" href="#">Chemistry PDF - Sir Haqnawaz</a>
+<a class="card" href="#">Mathematics PDF - Sir Abubakar</a>
+<a class="card" href="#">Computer PDF - Sir Kashif</a>
+<a class="card" href="#">ICT PDF - Sir Kashif</a>
+<a class="card" href="#">English PDF - Sir Faisal</a>
+<a class="card" href="#">Urdu PDF - Sir Mumtaz</a>
+<a class="card" href="#">Islamiyat PDF - Sir Mumtaz</a>
+<a class="card" href="#">Tarjuma-tul-Quran PDF - Sir Mumtaz</a>
+</div>
+</div>
+
+<!-- QUIZ PANEL -->
+<div class="panel">
+<h2>📝 Quiz Panel</h2>
+<p>⏱ Timer: <span id="quizTimer">60</span> seconds</p>
+
+<div style="margin-top:10px">
+<h3>Physics</h3>
+<ol>
+<li>What is the SI unit of force?
+  <ul>
+    <li>A. Newton ✅</li>
+    <li>B. Joule</li>
+    <li>C. Watt</li>
+    <li>D. Pascal</li>
+  </ul>
+</li>
+<li>Acceleration due to gravity on Earth?
+  <ul>
+    <li>A. 10 m/s² ✅</li>
+    <li>B. 9 m/s²</li>
+    <li>C. 9.8 m/s²</li>
+    <li>D. 8 m/s²</li>
+  </ul>
+</li>
+</ol>
+
+<h3>Chemistry</h3>
+<ol>
+<li>Atomic number of Oxygen?
+  <ul>
+    <li>A. 6</li>
+    <li>B. 8 ✅</li>
+    <li>C. 16</li>
+    <li>D. 12</li>
+  </ul>
+</li>
+<li>Periodic table groups are vertical or horizontal?
+  <ul>
+    <li>A. Vertical ✅</li>
+    <li>B. Horizontal</li>
+  </ul>
+</li>
+</ol>
+
+<h3>Computer</h3>
+<ol>
+<li>CPU stands for?
+  <ul>
+    <li>A. Central Process Unit</li>
+    <li>B. Central Processing Unit ✅</li>
+    <li>C. Computer Processing Unit</li>
+  </ul>
+</li>
+<li>Which of these is software?
+  <ul>
+    <li>A. Keyboard</li>
+    <li>B. Mouse</li>
+    <li>C. Microsoft Word ✅</li>
+  </ul>
+</li>
+</ol>
+
+<h3>ICT</h3>
+<ol>
+<li>Full form of ICT?
+  <ul>
+    <li>A. Information Communication Technology ✅</li>
+    <li>B. Internal Communication Tech</li>
+  </ul>
+</li>
+<li>Which is a web browser?
+  <ul>
+    <li>A. Chrome ✅</li>
+    <li>B. MS Word</li>
+    <li>C. Excel</li>
+  </ul>
+</li>
+</ol>
+
+<button onclick="startQuizTimer()">Start Quiz Timer</button>
+</div>
+</div>
+
+<!-- CHILL PANEL -->
+<div class="panel">
+<h2>🎯 Chill Panel</h2>
+<p>20 Math (+ − ×) Questions | Rewards | Timer</p>
+<ol>
+<li>5 + 7 = ?</li>
+<li>12 − 4 = ?</li>
+<li>3 × 6 = ?</li>
+<li>15 + 8 = ?</li>
+<li>9 − 3 = ?</li>
+<li>7 × 5 = ?</li>
+<li>20 + 15 = ?</li>
+<li>18 − 9 = ?</li>
+<li>6 × 7 = ?</li>
+<li>25 + 30 = ?</li>
+<li>40 − 15 = ?</li>
+<li>8 × 8 = ?</li>
+<li>50 + 25 = ?</li>
+<li>30 − 10 = ?</li>
+<li>9 × 9 = ?</li>
+<li>60 + 15 = ?</li>
+<li>70 − 20 = ?</li>
+<li>12 × 6 = ?</li>
+<li>45 + 20 = ?</li>
+<li>100 − 35 = ?</li>
+</ol>
+
+<ul>
+<li>“محنت کبھی ضائع نہیں جاتی”</li>
+<li>“کامیابی صبر مانگتی ہے”</li>
+<li>“علم طاقت ہے”</li>
+<li>“آج کی محنت کل کا سکون”</li>
+<li>“خود پر یقین رکھو”</li>
+</ul>
+</div>
+
+<!-- COMPLAIN PANEL -->
+<div class="panel" style="background:linear-gradient(#e3f2fd,#fff);">
+<h2>📩 Complain Panel</h2>
+<textarea placeholder="Write your complain here..."></textarea>
+<label><input type="checkbox"> Submit anonymously</label>
+<button>Send to Teacher</button>
+</div>
+
+<script>
+function startQuizTimer(){
+ let t=60;
+ let i=setInterval(()=>{
+   document.getElementById("quizTimer").innerText=t;
+   t--;
+   if(t<0){clearInterval(i);alert("Quiz Time Over!")}
+ },1000);
+}
+</script>
+<!-- FINAL ANIMATIONS & TRANSITIONS -->
+<style>
+/* Smooth hover animations for cards */
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+/* Panels slide-in on scroll */
+.panel{
+  opacity:0;
+  transform:translateY(30px);
+  transition:0.6s ease;
+}
+.panel.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Make tables responsive */
+table{
+  width:100%;
+  max-width:100%;
+  overflow-x:auto;
+  display:block;
+}
+</style>
+
+<script>
+// Scroll animation
+let panels=document.querySelectorAll(".panel");
+function showPanels(){
+  panels.forEach(p=>{
+    let top=p.getBoundingClientRect().top;
+    if(top<window.innerHeight - 50){p.classList.add("visible");}
+  });
+}
+window.addEventListener("scroll",showPanels);
+showPanels();
+
+// Optional: Smooth scroll for anchor links if needed
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+  anchor.addEventListener('click',function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+
+</div> <!-- End of .section -->
+
+</body>
+</html>
